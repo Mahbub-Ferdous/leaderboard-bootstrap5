@@ -4,45 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles.css-added -->
+    <link rel="stylesheet" href="css/main.css" />
     <!-- Bootstrap-CSS-CDN -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!------------------
+        font_awesome 
+    -------------------->
+    <script
+      src="https://kit.fontawesome.com/b8988a4b73.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Leader-Board Bootstrap</title>
     <style>
-      *,
-      *::after,
-      *::before {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      :root {
-        --primary-color: #562eff;
-        --secondary-color: #9f9f9f;
-        --primary-background: #f3f1ff;
-      }
-      .navbar {
-        background-color: var(--primary-color);
-      }
-      .title-color {
-        color: var(--primary-color);
-        font-weight: 500;
-        font-size: 20px;
-      }
       body {
-        background-color: var(--primary-background);
-      }
-      .text-decoration-none {
-        color: var(--primary-color);
-      }
-      .blog-details p {
-        color: var(--secondary-color);
+        background-color: rgb(224, 225, 226);
       }
     </style>
   </head>
   <body>
     <!-- header-section-start -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
           <a class="navbar-brand d-flex align-items-center" href="#"
             ><img
@@ -96,11 +79,11 @@
     </header>
     <!-- header-section-ends -->
     <main>
-      <section class="container bg-white rounded">
+      <section class="container bg-white rounded-2 py-2 mb-4">
         <!-- top-player-starts -->
-        <div class="mb-5">
+        <div class="my-4">
           <h4 class="title-color my-4">Top Players</h4>
-          <div class="row g-5">
+          <div class="row g-4">
             <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
               <img
                 src="images/players/player-1.png"
@@ -108,7 +91,7 @@
                 width="56"
                 height="56"
               />
-              <h5 class="ms-2">Rashed Hasnat</h5>
+              <h5 class="ms-3">Rashed Hasnat</h5>
             </div>
             <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
               <img
@@ -117,7 +100,7 @@
                 width="56"
                 height="56"
               />
-              <h5 class="ms-2">Taohid Khan</h5>
+              <h5 class="ms-3">Taohid Khan</h5>
             </div>
             <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
               <img
@@ -126,7 +109,7 @@
                 width="56"
                 height="56"
               />
-              <h5 class="ms-2">Wasim Tajul</h5>
+              <h5 class="ms-3">Wasim Tajul</h5>
             </div>
             <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
               <img
@@ -135,7 +118,7 @@
                 width="56"
                 height="56"
               />
-              <h5 class="ms-2">Mahbub Ferdous</h5>
+              <h5 class="ms-3">Mahbub Ferdous</h5>
             </div>
             <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
               <img
@@ -144,7 +127,7 @@
                 width="56"
                 height="56"
               />
-              <h5 class="ms-2">Mahbub Tanvir</h5>
+              <h5 class="ms-3">Mahbub Tanvir</h5>
             </div>
             <div class="col-lg-4 col-md-6 col-12 d-flex align-items-center">
               <img
@@ -153,27 +136,31 @@
                 width="56"
                 height="56"
               />
-              <h5 class="ms-2">Ashik Mahmud</h5>
+              <h5 class="ms-3">Ashik Mahmud</h5>
             </div>
           </div>
         </div>
-        <hr class="border-2" />
+        <hr />
         <!-- top-player-ends -->
         <!-- Top-Blogs-starts -->
-        <div class="">
+        <div class="pb-4">
           <h4 class="title-color my-4">Top Blogs</h4>
           <div class="row g-4">
-            <div class="col-lg-6">
-              <article
-                class="d-flex align-items-center flex-lg-row flex-md-row flex-sm-row flex-xs-column"
-              >
-                <img
-                  src="images/blogs/blog-1.png"
-                  alt=""
-                  width="177"
-                  height="117"
-                />
-                <div class="blog-details ps-3 mt-2">
+            <div class="col-lg-6 col-md-12 col-12">
+              <!-- in there we used nesting grid sytem in bootstrap -->
+              <!-- it works basically row inside again declared row that means nesting system -->
+              <div class="row d-flex">
+                <div class="col-md-4 col-lg-4 col-12 me-lg-4">
+                  <img
+                    src="images/blogs/blog-1.png"
+                    alt=""
+                    width="177"
+                    height="117"
+                  />
+                </div>
+                <div
+                  class="col-md-8 col-lg-6 col-12 blog-details mt-2 ps-lg-4 ps-md-0 ps-sm-0"
+                >
                   <h4>13 of My Favorite UI/UX Goodies</h4>
                   <p class="fw-bold">
                     By
@@ -182,19 +169,21 @@
                     >
                   </p>
                 </div>
-              </article>
+              </div>
             </div>
-            <div class="col-lg-6">
-              <article
-                class="d-flex align-items-center flex-lg-row flex-md-row flex-sm-row"
-              >
-                <img
-                  src="images/blogs/blog-2.png"
-                  alt=""
-                  width="177"
-                  height="117"
-                />
-                <div class="blog-details ps-3 mt-2">
+            <div class="col-lg-6 col-md-12 col-12">
+              <div class="row d-flex">
+                <div class="col-md-4 col-lg-4 col-12 me-lg-4">
+                  <img
+                    src="images/blogs/blog-2.png"
+                    alt=""
+                    width="177"
+                    height="117"
+                  />
+                </div>
+                <div
+                  class="col-md-6 col-lg-6 col-12 blog-details mt-2 ps-lg-4 ps-md-0 ps-sm-0"
+                >
                   <h4>UI cheat sheet:list vs grids</h4>
                   <p class="fw-bold">
                     By
@@ -203,19 +192,21 @@
                     >
                   </p>
                 </div>
-              </article>
+              </div>
             </div>
-            <div class="col-lg-6">
-              <article
-                class="d-flex align-items-center flex-lg-row flex-md-row flex-sm-row"
-              >
-                <img
-                  src="images/blogs/blog-3.png"
-                  alt=""
-                  width="177"
-                  height="117"
-                />
-                <div class="blog-details ps-3 mt-2">
+            <div class="col-lg-6 col-md-12 col-12">
+              <div class="row d-flex">
+                <div class="col-md-4 col-lg-4 col-12 me-lg-4">
+                  <img
+                    src="images/blogs/blog-3.png"
+                    alt=""
+                    width="177"
+                    height="117"
+                  />
+                </div>
+                <div
+                  class="col-md-6 col-lg-6 col-12 blog-details mt-2 ps-lg-4 ps-md-0 ps-sm-0"
+                >
                   <h4>7 typography tips for interface design</h4>
                   <p class="fw-bold">
                     By
@@ -224,19 +215,21 @@
                     >
                   </p>
                 </div>
-              </article>
+              </div>
             </div>
-            <div class="col-lg-6">
-              <article
-                class="d-flex align-items-center flex-lg-row flex-md-row flex-sm-row"
-              >
-                <img
-                  src="images/blogs/blog-4.png"
-                  alt=""
-                  width="177"
-                  height="117"
-                />
-                <div class="blog-details ps-3 mt-2">
+            <div class="col-lg-6 col-md-12 col-12">
+              <div class="row d-flex align-items-center">
+                <div class="col-md-4 col-lg-4 col-12 me-lg-4">
+                  <img
+                    src="images/blogs/blog-4.png"
+                    alt=""
+                    width="177"
+                    height="117"
+                  />
+                </div>
+                <div
+                  class="col-md-6 col-lg-6 col-12 col-sm-6 blog-details mt-2 ps-lg-4 ps-md-0 ps-sm-0"
+                >
                   <h4>Your logo is copied</h4>
                   <p class="fw-bold">
                     By
@@ -245,13 +238,134 @@
                     >
                   </p>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
         </div>
-
         <!-- Top-Blogs-ends -->
       </section>
+      <!------------------------------
+        Our-courses-section-starts 
+      ------------------------------->
+      <section class="container bg-white rounded-2 py-2 pb-4 mb-4">
+        <div>
+          <h4 class="title-color my-4">Our Courses</h4>
+          <div class="row g-2 g-md-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+              <div
+                class="card shadow-lg rounded rounded-3 p-4"
+                style="width: 18rem"
+              >
+                <img
+                  src="images/courses/course-1.png"
+                  class="card-img-top"
+                  alt="..."
+                  width="224"
+                  height="104"
+                />
+                <div class="card-body">
+                  <h4
+                    class="fs-5 mb-2 text-truncate"
+                    title="React - The Complete Guide 2020"
+                  >
+                    React - The Complete Guide 2020
+                  </h4>
+                  <p class="card-text mt-4">
+                    <a class="text-decoration-none" href="#">Walter Scott</a>
+                  </p>
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star text-secondary fs-6"></i>
+                    <span class="ms-2 text-secondary fw-bold">4.3</span>
+                    <div class="bg-hour w p-1 rounded-pill text-center ms-auto">
+                      <i class="fa-regular fa-clock"></i>
+                      01:20hr
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+              <div
+                class="card shadow-lg rounded rounded-3 p-4"
+                style="width: 18rem"
+              >
+                <img
+                  src="images/courses/course-2.png"
+                  class="card-img-top"
+                  alt="..."
+                  width="224"
+                  height="104"
+                />
+                <div class="card-body">
+                  <h4
+                    class="fs-5 mb-2 text-truncate"
+                    title="Powerpoint 2020 Master Powerpoint Course"
+                  >
+                    Powerpoint 2020 Master Powerpoint Course
+                  </h4>
+                  <p class="card-text mt-4">
+                    <a class="text-decoration-none" href="#">Reed Krakoff</a>
+                  </p>
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star text-secondary fs-6"></i>
+                    <span class="ms-2 text-secondary fw-bold">4.5</span>
+                    <div class="bg-hour w p-1 rounded-pill text-center ms-auto">
+                      <i class="fa-regular fa-clock"></i>
+                      01:30hr
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+              <div
+                class="card shadow-lg rounded rounded-3 p-4"
+                style="width: 18rem"
+              >
+                <img
+                  src="images/courses/course-3.png"
+                  class="card-img-top"
+                  alt="..."
+                  width="224"
+                  height="104"
+                />
+                <div class="card-body">
+                  <h4
+                    class="mb-2 fs-5 text-truncate"
+                    title="The Complete JavaScript Course 2022"
+                  >
+                    The Complete JavaScript Course 2022
+                  </h4>
+                  <p class="card-text mt-4">
+                    <a class="text-decoration-none" href="#">Reed Krakoff</a>
+                  </p>
+                  <div class="d-flex align-items-center">
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star filled fs-6"></i>
+                    <i class="fa-solid fa-star text-secondary fs-6"></i>
+                    <span class="ms-1 text-secondary fw-bold fs-6">4.5</span>
+                    <div class="bg-hour w p-1 rounded-pill text-center ms-auto">
+                      <i class="fa-regular fa-clock"></i>
+                      01:30hr
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Our-courses-section-ends -->
     </main>
     <footer></footer>
     <!-- Bootstrap-Javascript-CDN -->

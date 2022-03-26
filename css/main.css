@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #562eff;
+  --secondary-color: #9f9f9f;
+  --primary-background: #f3f1ff;
+}
+body {
+  background-color: var(--primary-background);
+}
+.navbar {
+  background-color: var(--primary-color);
+}
+main {
+  margin-top: 7em;
+}
+.title-color {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 20px;
+}
+.text-decoration-none {
+  color: var(--primary-color);
+}
+.blog-details p {
+  color: var(--secondary-color);
+}
+hr {
+  border: 2px solid rgb(156, 155, 155);
+}
+.bg-hour {
+  background-color: rgb(247, 206, 196);
+  color: rgb(212, 110, 85);
+  font-size: 12px;
+  font-weight: 500;
+}
+.filled {
+  color: rgb(253, 191, 32);
+}
+h4 > .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.w {
+  max-width: 38%;
+}
